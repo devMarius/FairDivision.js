@@ -55,18 +55,18 @@ fairDivision.printFinalAllocation();
 2. **Division of resources in the company**:
 
 ```javascript
-// Define various valuable assets owned by the company
+// Define various high-value assets to be divided
 const items = ['Office Building', 'Company Car', 'Equipment', 'Unused Funds', 'Patents', 'Brand'];
  
-// Add inputs for shareholders, creditor, and employees
+// Add inputs for both spouses and their lawyers
 const players = [
-  { name: 'Shareholder', bids: [80000, 20000, 30000, 70000, 25000, 40000] },
-  { name: 'Creditor', bids: [60000, 30000, 50000, 80000, 30000, 35000] },
-  { name: 'Employees', bids: [70000, 15000, 35000, 65000, 20000, 30000] }
+  { name: 'Shareholder', bids: [0, 20000, 30000, 70000, 50000, 100000] },
+  { name: 'Creditor', bids: [60000, 30000, 50000, 80000, 100000, 0] },
+  { name: 'Employees', bids: [70000, 15000, 35000, 65000, 0, 0] }
 ];
 
-// Use proportionalAllocation method to fairly divide the assets
+// Use adjustedWinner method to fairly divide the assets
 const fairDivision = new FairDivision(items, players);
-fairDivision.proportionalAllocation();
+fairDivision.adjustedWinner();
 fairDivision.printFinalAllocation();
 ```
